@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Eric's Fibonacci Number Generator</title>
+
+<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+</head>
+<body>
+
+<script>
+var HowMany = prompt("How many Fibonacci numbers do you want to see?");
+var CountUp = 1;
+var lastCountUp = 0;
+var lastlastCountUp = 0;
+var NumbersPrinted = 1;
+
+while (HowMany != parseInt(HowMany,10)) {
+	var HowMany = prompt("I don't think I can count that high, wanna try again?"); 
+}
+
+document.write ("Alright here we go, " + HowMany + " Fibonacci numbers coming right up.")
+
+while (NumbersPrinted <= HowMany) {
+	document.write("<br>" + CountUp);
+	lastlastCountUp = lastCountUp;
+	lastCountUp = CountUp;
+	CountUp = lastCountUp + lastlastCountUp; 
+	NumbersPrinted++;
+}
+
+document.write ("<BR>" + "There you go!");
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
